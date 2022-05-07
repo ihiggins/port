@@ -2,6 +2,7 @@
   "name": "port",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ihiggins.github.io/port/",
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
@@ -16,6 +17,7 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@use-gesture/react": "^10.2.12",
+    "gh-pages": "^3.2.3",
     "lodash-es": "^4.17.21",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
@@ -28,7 +30,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
