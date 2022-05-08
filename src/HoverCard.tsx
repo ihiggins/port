@@ -17,7 +17,7 @@ const HoverCard = ({ children }: any) => {
   }));
   return (
     <animated.div
-      class="hover-card"
+      className="hover-card"
       onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
       onMouseLeave={() => set({ xys: [0, 0, 1] })}
       style={{ transform: props.xys.to(trans) }}

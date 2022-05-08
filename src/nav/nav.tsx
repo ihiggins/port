@@ -1,6 +1,7 @@
 //@ts-nocheck
 import "./nav.css";
 import { useState, useEffect } from "react";
+import Button from "@mui/material/Button/Button";
 
 export function Nav({ move }: any) {
   const [active, setActive] = useState(true);
@@ -49,34 +50,48 @@ export function Nav({ move }: any) {
         </div>
       </div>
       <div className="nav">
-        {/* <div className="nav__content">
+        <div className="nav__content">
           <ul className="nav__list">
-            <li
-              className="nav__list-item"
-              onClick={() => {
-                movePage(0);
-              }}
-            >
-              Home
+            <li className="nav__list-item">
+              <h4 className="text-header">Looking for a dev?</h4>
             </li>
-            <li
-              className="nav__list-item"
-              onClick={() => {
-                movePage(1);
-              }}
-            >
-              About
+            <li className="nav__list-item">
+              <h2 className="text-title">Get in touch</h2>
             </li>
-            <li
-              className="nav__list-item"
-              onClick={() => {
-                movePage(2);
-              }}
+            <li className="nav__list-item">
+              
+              <Button
+              target={"_blank"}
+              variant="outlined"
+              href={process.env.PUBLIC_URL + "/Resume_Isaac_Higgins.pdf"}
+              className="button-over"
             >
-              Experience
+              Send me an email
+            </Button>
             </li>
           </ul>
-        </div> */}
+
+          {/* <div className="section"> */}
+          {/* <h4 className="text-header">Hi There, Hello, I am</h4>
+            <h2 className="text-title">Isaac Higgins.</h2>
+            <h2 className="text-dark-title">
+              An aspiring full-stack developer.
+            </h2>
+            <p className="spacer">
+              I’m a Full-Stack Developer located around Boston. I have a serious
+              passion for building web-applications and creating intuitive,
+              dynamic user experiences.
+            </p> */}
+          {/* <Button
+              target={"_blank"}
+              variant="outlined"
+              href={process.env.PUBLIC_URL + "/Resume_Isaac_Higgins.pdf"}
+              className="button-over"
+            >
+              View My Resume
+            </Button> */}
+          {/* </div> */}
+        </div>
       </div>
     </>
   );

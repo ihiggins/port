@@ -5,7 +5,6 @@ import { useSprings, animated, useSpringRef } from "react-spring";
 import { useGesture, useDrag, useScroll } from "@use-gesture/react";
 import styles from "./Styles.module.scss";
 const Layout = ({ children }: any) => {
-  console.log(children)
   var pages = children;
   let index = 0;
   const height = window.innerHeight;
@@ -48,8 +47,6 @@ const Layout = ({ children }: any) => {
       drag: { enabled: true, passive: true },
     }
   );
-
-  console.count("APP RENDER CYCLES");
 
   return (
     <div className={styles.layout} {...bind()}>
