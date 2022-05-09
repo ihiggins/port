@@ -4,6 +4,7 @@ import clamp from "lodash-es/clamp";
 import { useSprings, animated, useSpringRef } from "react-spring";
 import { useGesture, useDrag, useScroll } from "@use-gesture/react";
 import styles from "./Styles.module.scss";
+import { Directions } from "@mui/icons-material";
 const Layout = ({ children }: any) => {
   var pages = children;
   let index = 0;
@@ -36,11 +37,30 @@ const Layout = ({ children }: any) => {
       }
     });
   };
+  const animate2 = ({
+    active,
+    movement: [mx, my],
+    direction: [xDir, yDir],
+    cancel,
+    down,
+  }) => {
+    index = clamp(index + (-yDir > 0 ? -1 : 1), 0, pages.length - 1);
+
+    api.start((i) => {
+      if (i < index - 1 || i > index + 1) {
+        return { display: "none", immediate: true };
+      } else {
+        const y = (i - index) * height;
+        const scale = 1;
+        return { y, scale, display: "block" };
+      }
+    });
+  };
 
   const bind = useGesture(
     {
       onDrag: (state) => animate(state),
-      onWheel: (state) => animate(state),
+      onWheelStart: (state) => animate2(state),
     },
     {
       wheel: { enabled: true },
