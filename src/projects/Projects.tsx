@@ -14,7 +14,7 @@ const Projects = () => {
           <h3>Some things I made. </h3>
         </div>
 
-        <div className="project">
+        <div className="project" style={{marginBottom:'40px'}}>
           {ShowCard && (
             <HoverCard>
               <a href="https://github.com/ihiggins/expt" className="preview">
