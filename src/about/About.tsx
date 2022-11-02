@@ -17,12 +17,12 @@ const About = () => {
           <div>
             <HoverCard>
               <div className="picture">
-                <img src="https://media-exp1.licdn.com/dms/image/C4D03AQHZP76XRKYODw/profile-displayphoto-shrink_800_800/0/1594911606932?e=1657152000&v=beta&t=CGFr62Aua3Z8ea_rc7OYW1lXVpkZ1Eby3wXScEbX7Gs"></img>
+                <img src={process.env.PUBLIC_URL + "/me.jpg"}></img>
               </div>
             </HoverCard>
             <p>
-              Hi there, I'm a student at the University of Massachusetts Boston
-              majoring in Information Technology.
+              Hi there, I'm a software engineer based in Boston, Ma. I currently work at
+              Retail Business Services.
               <br />
               <br />
               Im a big fan of building full-stack web applications. Im most

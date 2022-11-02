@@ -18,7 +18,9 @@ const Projects = () => {
           {ShowCard && (
             <HoverCard>
               <a href="https://github.com/ihiggins/expt" className="preview">
-                <img src="https://github.com/ihiggins/expt/raw/master/Preview.png" />
+                <img 
+                style={{objectFit:'fill'}}
+                src="https://github.com/ihiggins/expt/raw/master/Preview.png" />
               </a>
             </HoverCard>
           )}
@@ -41,27 +43,30 @@ const Projects = () => {
 
         <div className="project">
           <div className="content" style={{ textAlign: "left" }}>
-            <h5>Legislates</h5>
-            <h4>NLP News Aggregator</h4>
+            <h5>Artram</h5>
+            <h4>A Social Media Forum</h4>
             <p>
-              Legislates is a government news Aggregator powered by AI Natural
-              Language Processing.
+              Artram is a discord themed forum that is similar to reddit. 
+              Its built from scratch on AWS but is a WIP.
             </p>
             <ul style={{ flexDirection: "row" }}>
               <li>React</li>
               <li>Node Js</li>
-              <li>Python</li>
+              <li>Redis</li>
               <li>Postgres</li>
+              <li>Socket.io</li>
             </ul>
           </div>
           {ShowCard && (
             <HoverCard>
               {" "}
               <a
-                href="https://github.com/ihiggins/legislates-web"
+                href="https://artram.app"
                 className="preview"
               >
-                <img src="https://github.com/ihiggins/legislates-web/raw/master/preview.png" />
+                <img 
+                style={{objectFit:'fill'}}
+                src={process.env.PUBLIC_URL + "/artram.png"} />
               </a>
             </HoverCard>
           )}
